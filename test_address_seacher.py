@@ -20,10 +20,10 @@ class TestAddressSearcher(unittest.TestCase):
 
     def test_存在しない郵便番号が入力されたらエラーメッセージを表示する(self):
         address_seacher = AddressSearcher()
+
         actual = address_seacher.search(postal_code="1234567")
 
-        expected = "該当するデータは見つかりませんでした。検索キーワードを変えて再検索してください。"
-        self.assertEqual(expected, actual)
+        self.assertEqual("該当するデータは見つかりませんでした。検索キーワードを変えて再検索してください。", actual)
 
 
 if __name__ == "__main__":
